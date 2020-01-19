@@ -1,4 +1,4 @@
-pterraform {
+terraform {
   backend "gcs" {
     bucket  = "sales-eu01-shared"
     prefix  = "terraform/state"
