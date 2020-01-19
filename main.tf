@@ -16,6 +16,7 @@ resource "google_compute_instance" "default" {
   name         = "vm-arjun"
   machine_type = "f1-micro"
   zone         = "europe-west2-a"
+  subnetwork = "dev-public"
   network_interface {
     network = "dev-vpc"
   }
