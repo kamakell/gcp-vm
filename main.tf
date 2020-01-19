@@ -23,7 +23,7 @@ name         = "${var.vm_instance}-shy"
   }
 
  resource "google_compute_network" "vpc_network" {
- name = "vpc-network"
+ name = "dev-vpc"
 }
   network_interface {
     # A default network is created for all GCP projects
