@@ -16,4 +16,9 @@ resource "google_compute_instance" "default" {
   name         = "vm-arjun"
   machine_type = "f1-micro"
   zone         = "eu-west2"
+  boot_disk {
+    initialize_params {
+      image     =  "centos-7-v20180129"     
+    }
+  }
 }
