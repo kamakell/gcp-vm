@@ -12,22 +12,8 @@ provider "google" {
 }
 
 # A VM is created
-resource "google_compute_instance" "vm_instance" {
-name         = "${var.vm_instance}-shy"
- machine_type = "f1-micro"
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-9"
-    }
-  }
-
- resource "google_compute_network" "vpc_network" {
- name = "dev-vpc"
-  network_interface {
-    # A default network is created for all GCP projects
-    network       = "${google_compute_network.vpc_network.self_link}"
-    access_config {
-    }
-  }
+resource "google_compute_instance" "default" {
+  name         = "vm-${random_id.instance_id.hex}"
+  machine_type = "f1-micro"
+  zone         = "eu-west2"
 }
