@@ -17,7 +17,7 @@ resource "google_compute_instance" "default" {
   machine_type = "f1-micro"
   zone         = "europe-west2-a"
   network_interface {
-    network = "dev"
+    network = "dev-vpc"
   }
   boot_disk {
     initialize_params {
