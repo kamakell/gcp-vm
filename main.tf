@@ -1,4 +1,4 @@
-terraform {
+pterraform {
   backend "gcs" {
     bucket  = "sales-eu01-shared"
     prefix  = "terraform/state"
@@ -15,7 +15,7 @@ provider "google" {
 resource "google_compute_instance" "default" {
   name         = "vm-arjun"
   machine_type = "f1-micro"
-  zone         = "eu-west2"
+  zone         = "europe-west2-a"
   network_interface {
     network = "dev"
   }
